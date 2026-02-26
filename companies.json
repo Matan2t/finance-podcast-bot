@@ -1,0 +1,64 @@
+{
+  "companies": [
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "cik": "0000320193"
+    },
+    {
+      "name": "Nvidia",
+      "ticker": "NVDA",
+      "cik": "0001045810"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "cik": "0000789019"
+    },
+    {
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "cik": "0001018724"
+    },
+    {
+      "name": "Alphabet",
+      "ticker": "GOOGL",
+      "cik": "0001652044"
+    },
+    {
+      "name": "Meta Platforms",
+      "ticker": "META",
+      "cik": "0001326801"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "cik": "0001318605"
+    },
+    {
+      "name": "Berkshire Hathaway",
+      "ticker": "BRK.B",
+      "cik": "0001067983"
+    },
+    {
+      "name": "JPMorgan Chase",
+      "ticker": "JPM",
+      "cik": "0000019617"
+    },
+    {
+      "name": "Visa",
+      "ticker": "V",
+      "cik": "0001403161"
+    },
+    {
+      "name": "Bank of America",
+      "ticker": "BAC",
+      "cik": "0000070858"
+    },
+    {
+      "name": "Exxon Mobil",
+      "ticker": "XOM",
+      "cik": "0000034088"
+    }
+  ]
+}
