@@ -10,9 +10,18 @@ from googleapiclient.http import MediaFileUpload
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
 
-# ---------- Load companies ----------
-with open("companies.json") as f:
-    companies = json.load(f)["companies"]
+# ---------- Gemini model (hard-coded) ----------
+# Pick ONE model and set it to GEMINI_MODEL.
+# Common options:
+# - "gemini-2.0-flash"
+# - "gemini-1.5-pro"
+# - "gemini-1.5-flash"
+GEMINI_MODEL = "gemini-2.0-flash"
+
+
+def load_companies(path: str = "companies.json") -> list[dict]:
+    with open(path) as f:
+        return json.load(f)["companies"]
 
 # ---------- SEC fetch ----------
 def get_latest_report(cik):
@@ -22,17 +31,14 @@ def get_latest_report(cik):
     return r.text[:4000]  # חותך למניעת עומס
 
 # ---------- Gemini summary ----------
-client = genai.Client(api_key=os.environ["GEMINI_KEY"])
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
-
-def summarize(text, company):
+def summarize(client: genai.Client, model: str, text: str, company: str) -> str:
     prompt = f"""
     תסכם כפודקאסט פיננסי בעברית באורך 3 דקות.
     החברה: {company}
     טקסט:
     {text}
     """
-    response = client.models.generate_content(model=GEMINI_MODEL, contents=prompt)
+    response = client.models.generate_content(model=model, contents=prompt)
     return response.text or ""
 
 # ---------- YouTube ----------
@@ -73,17 +79,25 @@ def upload_video(file_path, title):
     response = request.execute()
     print("Uploaded video ID:", response["id"])
 
-# ---------- Main loop ----------
-for company in companies:
-    report = get_latest_report(company["cik"])
-    script = summarize(report, company["name"])
 
-    tts = gTTS(script, lang="he")
-    tts.save("audio.mp3")
+def main() -> None:
+    client = genai.Client(api_key=os.environ["GEMINI_KEY"])
+    companies = load_companies()
 
-    audio = AudioFileClip("audio.mp3")
-    image = ImageClip("background.png").set_duration(audio.duration)
-    video = image.set_audio(audio)
-    video.write_videofile("final.mp4", fps=24)
+    for company in companies:
+        report = get_latest_report(company["cik"])
+        script = summarize(client, GEMINI_MODEL, report, company["name"])
 
-    upload_video("final.mp4", f"סיכום דוח - {company['name']}")
+        tts = gTTS(script, lang="he")
+        tts.save("audio.mp3")
+
+        audio = AudioFileClip("audio.mp3")
+        image = ImageClip("background.png").set_duration(audio.duration)
+        video = image.set_audio(audio)
+        video.write_videofile("final.mp4", fps=24)
+
+        upload_video("final.mp4", f"סיכום דוח - {company['name']}")
+
+
+if __name__ == "__main__":
+    main()
