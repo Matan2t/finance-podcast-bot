@@ -16,7 +16,7 @@ from google.auth.transport.requests import Request
 # - "gemini-2.0-flash"
 # - "gemini-1.5-pro"
 # - "gemini-1.5-flash"
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-1.5-pro"
 
 
 def load_companies(path: str = "companies.json") -> list[dict]:
