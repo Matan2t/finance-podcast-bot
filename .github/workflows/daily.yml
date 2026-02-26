@@ -1,19 +1,28 @@
-name: Daily
+name: Daily Finance Podcast
 
+# מאפשר הרצה ידנית וגם אוטומטית כל יום בשעה 6:00 UTC
 on:
+  workflow_dispatch:  # לחיצה על "Run workflow" ידנית
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+    - cron: '0 6 * * *'
 
 jobs:
-  run:
+  run-bot:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      # משוך את הקוד מהריפו
+      - uses: actions/checkout@v3
+
+      # התקן Python
+      - uses: actions/setup-python@v4
         with:
-          python-version: '3.12'
+          python-version: '3.11'
+
+      # התקן ספריות
       - run: pip install -r requirements.txt
+
+      # הרץ את main.py עם הסביבה
       - run: python main.py
 env:
   GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
