@@ -1,7 +1,7 @@
 import json
 import requests
 import os
-import google.generativeai as genai
+from google import genai
 from gtts import gTTS
 from moviepy import AudioFileClip, ImageClip
 from googleapiclient.discovery import build
@@ -22,8 +22,8 @@ def get_latest_report(cik):
     return r.text[:4000]  # חותך למניעת עומס
 
 # ---------- Gemini summary ----------
-genai.configure(api_key=os.environ["GEMINI_KEY"])
-model = genai.GenerativeModel("gemini-pro")
+client = genai.Client(api_key=os.environ["GEMINI_KEY"])
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
 
 def summarize(text, company):
     prompt = f"""
@@ -32,8 +32,8 @@ def summarize(text, company):
     טקסט:
     {text}
     """
-    response = model.generate_content(prompt)
-    return response.text
+    response = client.models.generate_content(model=GEMINI_MODEL, contents=prompt)
+    return response.text or ""
 
 # ---------- YouTube ----------
 def get_youtube_service():
