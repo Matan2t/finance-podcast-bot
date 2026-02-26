@@ -59,6 +59,31 @@
       "name": "Exxon Mobil",
       "ticker": "XOM",
       "cik": "0000034088"
+    },
+    {
+      "name": "Mobileye",
+      "ticker": "MBLY",
+      "cik": "0001910139"
+    },
+    {
+      "name": "iShares Expanded Tech-Software Sector ETF",
+      "ticker": "IGV",
+      "cik": "001100663"
+    },
+    {
+      "name": "Robinhood Markets",
+      "ticker": "HOOD",
+      "cik": "0001783879"
+    },
+    {
+      "name": "ONEOK",
+      "ticker": "OKE",
+      "cik": "0001039684"
+    },
+    {
+      "name": "Palantir Technologies",
+      "ticker": "PLTR",
+      "cik": "0001321655"
     }
   ]
 }

@@ -15,3 +15,8 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt
       - run: python main.py
+env:
+  GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+  YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+  YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+  YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
