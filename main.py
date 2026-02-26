@@ -3,7 +3,7 @@ import requests
 import os
 import google.generativeai as genai
 from gtts import gTTS
-from moviepy.editor import AudioFileClip, ImageClip
+from moviepy import AudioFileClip, ImageClip
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 # from google.oauth2 import service_account
