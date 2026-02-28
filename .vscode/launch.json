@@ -14,6 +14,21 @@
       "env": {
         "GEMINI_MODEL": "gemini-2.0-flash"
       }
+    },
+    {
+      "name": "Run earningcall_parser (all companies)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/earningcall_parser.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "python": "${command:python.interpreterPath}",
+      "args": [
+        "--companies-json",
+        "${workspaceFolder}/companies.json",
+        "--all-companies"
+      ]
     }
   ]
 }

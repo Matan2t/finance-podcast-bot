@@ -3,87 +3,237 @@
     {
       "name": "Apple",
       "ticker": "AAPL",
-      "cik": "0000320193"
+      "cik": "0000320193",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "aapl",
+        "year": 2026,
+        "quarter": "q1",
+        "date": "2026-01-29"
+      }
     },
     {
-      "name": "Nvidia",
-      "ticker": "NVDA",
-      "cik": "0001045810"
-    },
-    {
-      "name": "Microsoft",
-      "ticker": "MSFT",
-      "cik": "0000789019"
+      "ticker": "ADBE",
+      "name": "ADOBE INC.",
+      "cik": "0000796343",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "adbe",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2025-12-10"
+      }
     },
     {
       "name": "Amazon",
       "ticker": "AMZN",
-      "cik": "0001018724"
-    },
-    {
-      "name": "Alphabet",
-      "ticker": "GOOGL",
-      "cik": "0001652044"
-    },
-    {
-      "name": "Meta Platforms",
-      "ticker": "META",
-      "cik": "0001326801"
-    },
-    {
-      "name": "Tesla",
-      "ticker": "TSLA",
-      "cik": "0001318605"
-    },
-    {
-      "name": "Berkshire Hathaway",
-      "ticker": "BRK.B",
-      "cik": "0001067983"
-    },
-    {
-      "name": "JPMorgan Chase",
-      "ticker": "JPM",
-      "cik": "0000019617"
-    },
-    {
-      "name": "Visa",
-      "ticker": "V",
-      "cik": "0001403161"
+      "cik": "0001018724",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "amzn",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-02-05"
+      }
     },
     {
       "name": "Bank of America",
       "ticker": "BAC",
-      "cik": "0000070858"
+      "cik": "0000070858",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "bac",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-01-14"
+      }
     },
     {
-      "name": "Exxon Mobil",
-      "ticker": "XOM",
-      "cik": "0000034088"
+      "name": "Berkshire Hathaway",
+      "ticker": "BRK.B",
+      "cik": "0001067983",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "brk-b",
+        "year": 2025,
+        "quarter": "q2",
+        "date": null
+      }
     },
     {
-      "name": "Mobileye",
-      "ticker": "MBLY",
-      "cik": "0001910139"
+      "ticker": "CRM",
+      "name": "Salesforce, Inc.",
+      "cik": "0001108524",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "crm",
+        "year": 2026,
+        "quarter": "q4",
+        "date": "2026-02-25"
+      }
     },
     {
-      "name": "iShares Expanded Tech-Software Sector ETF",
-      "ticker": "IGV",
-      "cik": "001100663"
+      "name": "Alphabet",
+      "ticker": "GOOGL",
+      "cik": "0001652044",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "goog",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-02-04"
+      }
     },
     {
       "name": "Robinhood Markets",
       "ticker": "HOOD",
-      "cik": "0001783879"
+      "cik": "0001783879",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "hood",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-02-10"
+      }
+    },
+    {
+      "name": "iShares Expanded Tech-Software Sector ETF",
+      "ticker": "IGV",
+      "cik": "0001100663",
+      "exchange": "bats",
+      "earnings_call": null
+    },
+    {
+      "name": "JPMorgan Chase",
+      "ticker": "JPM",
+      "cik": "0000019617",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "jpm",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-01-13"
+      }
+    },
+    {
+      "name": "Mobileye",
+      "ticker": "MBLY",
+      "cik": "0001910139",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "mbly",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-01-22"
+      }
+    },
+    {
+      "name": "Meta Platforms",
+      "ticker": "META",
+      "cik": "0001326801",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "meta",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-01-28"
+      }
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "cik": "0000789019",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "msft",
+        "year": 2026,
+        "quarter": "q2",
+        "date": "2026-01-28"
+      }
+    },
+    {
+      "name": "Nvidia",
+      "ticker": "NVDA",
+      "cik": "0001045810",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "nvda",
+        "year": 2026,
+        "quarter": "q4",
+        "date": "2026-02-25"
+      }
     },
     {
       "name": "ONEOK",
       "ticker": "OKE",
-      "cik": "0001039684"
+      "cik": "0001039684",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "oke",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-02-24"
+      }
+    },
+    {
+      "ticker": "ORCL",
+      "name": "ORACLE CORP",
+      "cik": "0001341439",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "orcl",
+        "year": 2026,
+        "quarter": "q3",
+        "date": "2026-03-06"
+      }
     },
     {
       "name": "Palantir Technologies",
       "ticker": "PLTR",
-      "cik": "0001321655"
+      "cik": "0001321655",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "pltr",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-02-01"
+      }
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "cik": "0001318605",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "tsla",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-01-28"
+      }
+    },
+    {
+      "name": "Visa",
+      "ticker": "V",
+      "cik": "0001403161",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "v",
+        "year": 2026,
+        "quarter": "q1",
+        "date": "2026-01-29"
+      }
+    },
+    {
+      "name": "Exxon Mobil",
+      "ticker": "XOM",
+      "cik": "0000034088",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "xom",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-01-30"
+      }
     }
   ]
 }

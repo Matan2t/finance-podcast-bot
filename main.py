@@ -9,6 +9,7 @@ from googleapiclient.http import MediaFileUpload
 # from google.oauth2 import service_account
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
+from earningcall_parser import parse_company_earningscall_transcript
 
 # ---------- Gemini model (hard-coded) ----------
 # Pick ONE model and set it to GEMINI_MODEL.
@@ -22,6 +23,13 @@ GEMINI_MODEL = "gemini-2.0-flash"
 def load_companies(path: str = "companies.json") -> list[dict]:
     with open(path) as f:
         return json.load(f)["companies"]
+
+def get_company_source_text(company: dict) -> str:
+    # Prefer earnings-call transcript; fallback to SEC JSON snippet if missing.
+    try:
+        return parse_company_earningscall_transcript(company)
+    except Exception:
+        return get_latest_report(company["cik"])
 
 # ---------- SEC fetch ----------
 def get_latest_report(cik):
@@ -85,10 +93,13 @@ def main() -> None:
     companies = load_companies()
 
     for company in companies:
-        report = get_latest_report(company["cik"])
-        script = summarize(client, GEMINI_MODEL, report, company["name"])
+        print(f"Processing company: {company['name']}")
+        source_text = get_company_source_text(company)
+        print(f"Source text: {source_text}")
+        script = summarize(client, GEMINI_MODEL, source_text, company["name"])
+        print(f"Summary script: {script}")
 
-        tts = gTTS(script, lang="he")
+        tts = gTTS(source_text, lang="he")
         tts.save("audio.mp3")
 
         audio = AudioFileClip("audio.mp3")
@@ -96,7 +107,7 @@ def main() -> None:
         video = image.set_audio(audio)
         video.write_videofile("final.mp4", fps=24)
 
-        upload_video("final.mp4", f"סיכום דוח - {company['name']}")
+        # upload_video("final.mp4", f"סיכום דוח - {company['name']}")
 
 
 if __name__ == "__main__":

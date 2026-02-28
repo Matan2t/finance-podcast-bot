@@ -35,3 +35,11 @@ conda run -n finance-podcast-bot python main.py
 1. Activate the environment: `conda activate finance-podcast-bot`
 2. Set required environment variables (e.g. `GEMINI_KEY`)
 3. Run: `python main.py`
+
+## Earnings call parser
+
+Run the transcript parser for all companies in `companies.json`:
+
+```bash
+python3 earningcall_parser.py --companies-json companies.json --all-companies
+```
