@@ -1,8 +1,17 @@
 requests
 google-genai
-gtts
 moviepy
 google-api-python-client
 google-auth
 google-auth-oauthlib
 google-auth-httplib2
+onnxruntime
+transformers
+huggingface_hub
+soundfile
+piper-onnx>=1.0.6
+optimum-onnx @ git+https://github.com/thewh1teagle/optimum-onnx.git@hebrew1
+phonikud
+phonikud-onnx
+pillow
+finnhub-python
