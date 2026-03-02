@@ -341,6 +341,15 @@ def main() -> int:
         dry_run=args.dry_run,
     )
 
+    '''
+    example:
+    python3 "/homes/matant/work/objd/py/finance-podcast-bot/companies_updater.py" \
+  --file "/homes/matant/work/objd/py/finance-podcast-bot/companies.json" \
+  --update-existing \
+  --user-agent "finance-podcast-bot companies_updater/1.0 (contact: your.email@company.com)" \
+  --ticker "ASTS,ADBE,AMZN,BAC,CRM,GOOGL,HOOD,MBLY,MSFT,META,NVDA,OKE,ORCL,PLTR,TSLA,V,XOM"
+    '''
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

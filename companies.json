@@ -1,7 +1,7 @@
 {
   "companies": [
     {
-      "name": "Apple",
+      "name": "Apple Inc.",
       "ticker": "AAPL",
       "cik": "0000320193",
       "exchange": "nasdaq",
@@ -10,6 +10,210 @@
         "year": 2026,
         "quarter": "q1",
         "date": "2026-01-29"
+      }
+    },
+    {
+      "ticker": "ADBE",
+      "name": "ADOBE INC.",
+      "cik": "0000796343",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "adbe",
+        "year": 2026,
+        "quarter": "q1",
+        "date": "2026-03-12"
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "name": "AMAZON COM INC",
+      "cik": "0001018724",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "amzn",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-02-05"
+      }
+    },
+    {
+      "ticker": "ASTS",
+      "name": "AST SpaceMobile, Inc.",
+      "cik": "0001780312",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "asts",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-03-02"
+      }
+    },
+    {
+      "ticker": "BAC",
+      "name": "BANK OF AMERICA CORP /DE/",
+      "cik": "0000070858",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "bac",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-01-14"
+      }
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce, Inc.",
+      "cik": "0001108524",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "crm",
+        "year": 2026,
+        "quarter": "q4",
+        "date": "2026-02-25"
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "cik": "0001652044",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "goog",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-02-04"
+      }
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood Markets, Inc.",
+      "cik": "0001783879",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "hood",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-02-10"
+      }
+    },
+    {
+      "ticker": "MBLY",
+      "name": "Mobileye Global Inc.",
+      "cik": "0001910139",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "mbly",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-01-22"
+      }
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms, Inc.",
+      "cik": "0001326801",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "meta",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-01-28"
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "name": "MICROSOFT CORP",
+      "cik": "0000789019",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "msft",
+        "year": 2026,
+        "quarter": "q2",
+        "date": "2026-01-28"
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA CORP",
+      "cik": "0001045810",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "nvda",
+        "year": 2026,
+        "quarter": "q4",
+        "date": "2026-02-25"
+      }
+    },
+    {
+      "ticker": "OKE",
+      "name": "ONEOK INC /NEW/",
+      "cik": "0001039684",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "oke",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-02-24"
+      }
+    },
+    {
+      "ticker": "ORCL",
+      "name": "ORACLE CORP",
+      "cik": "0001341439",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "orcl",
+        "year": 2026,
+        "quarter": "q3",
+        "date": "2026-03-06"
+      }
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies Inc.",
+      "cik": "0001321655",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "pltr",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-02-01"
+      }
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "cik": "0001318605",
+      "exchange": "nasdaq",
+      "earnings_call": {
+        "symbol": "tsla",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-01-28"
+      }
+    },
+    {
+      "ticker": "V",
+      "name": "VISA INC.",
+      "cik": "0001403161",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "v",
+        "year": 2026,
+        "quarter": "q1",
+        "date": "2026-01-29"
+      }
+    },
+    {
+      "ticker": "XOM",
+      "name": "EXXON MOBIL CORP",
+      "cik": "0000034088",
+      "exchange": "nyse",
+      "earnings_call": {
+        "symbol": "xom",
+        "year": 2025,
+        "quarter": "q4",
+        "date": "2026-01-30"
       }
     }
   ]
