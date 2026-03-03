@@ -217,8 +217,11 @@ def main() -> None:
             pass
 
         if _is_truthy_env("UPLOAD_YOUTUBE"):
+            print(f"Uploading video to YouTube: {company['name']}")
             title = f"סיכום דוח - {company['name']}"
             upload_video("final.mp4", title)
+        
+        print(f"Finished processing company: {company['name']}")
 
 
 if __name__ == "__main__":
